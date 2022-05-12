@@ -29,6 +29,10 @@ build/
 local.properties
 *.iml
 
+# Credentials
+#
+agconnect-services.json
+
 # node.js
 #
 node_modules/
