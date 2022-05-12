@@ -28,8 +28,10 @@ export default class ConsentsController extends React.Component {
       lang: "en-us",
       appId: "103345755",
       scopeList: [
-        "https://www.huawei.com/healthkit/step.both",
-        "https://www.huawei.com/healthkit/calories.both",
+        "https://www.huawei.com/healthkit/step.read",
+        "https://www.huawei.com/healthkit/step.write",
+        "https://www.huawei.com/healthkit/calories.read",
+        "https://www.huawei.com/healthkit/calories.write",
         "https://www.huawei.com/healthkit/step.realtime",
       ],
     };

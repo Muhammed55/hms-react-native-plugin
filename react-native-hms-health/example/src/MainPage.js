@@ -31,26 +31,34 @@ import DataController from "./DataController";
 import AutoRecorderController from "./AutoRecorderController";
 import ActivityRecordsController from "./ActivityRecordsController";
 import SettingController from "./SettingController";
-import ConsentsController from "./ConsentsController"; 
+import ConsentsController from "./ConsentsController";
 import HealthRecordController from "./HealthRecordController";
 
 // Add scopes to apply for. The following only shows an example.
 // Developers need to add scopes according to their specific needs.
 const scopes = [
   // View and save steps in HUAWEI Health Kit.
-  HmsHealthAccount.HEALTHKIT_STEP_BOTH,
+  HmsHealthAccount.HEALTHKIT_STEP_READ,
+  HmsHealthAccount.HEALTHKIT_STEP_WRITE,
   // View and save height and weight in HUAWEI Health Kit.
-  HmsHealthAccount.HEALTHKIT_HEIGHTWEIGHT_BOTH,
+  HmsHealthAccount.HEALTHKIT_HEIGHTWEIGHT_READ,
+  HmsHealthAccount.HEALTHKIT_HEIGHTWEIGHT_WRITE,
   // View and save the heart rate data in HUAWEI Health Kit.
-  HmsHealthAccount.HEALTHKIT_HEARTRATE_BOTH,
+  HmsHealthAccount.HEALTHKIT_HEARTRATE_READ,
+  HmsHealthAccount.HEALTHKIT_HEARTRATE_WRITE,
   // View and save activity data
-  HmsHealthAccount.HEALTHKIT_ACTIVITY_BOTH,
+  HmsHealthAccount.HEALTHKIT_ACTIVITY_READ,
+  HmsHealthAccount.HEALTHKIT_ACTIVITY_WRITE,
   //View and save workout record data
-  HmsHealthAccount.HEALTHKIT_ACTIVITY_RECORD_BOTH,
+  HmsHealthAccount.HEALTHKIT_ACTIVITY_RECORD_READ,
+  HmsHealthAccount.HEALTHKIT_ACTIVITY_RECORD_WRITE,
   //Calories Burnt
-  HmsHealthAccount.HEALTHKIT_CALORIES_BOTH,
-  HmsHealthAccount.HEALTHKIT_NUTRITION_BOTH,
-  HmsHealthAccount.HEALTHKIT_LOCATION_BOTH,
+  HmsHealthAccount.HEALTHKIT_CALORIES_READ,
+  HmsHealthAccount.HEALTHKIT_CALORIES_WRITE,
+  HmsHealthAccount.HEALTHKIT_NUTRITION_READ,
+  HmsHealthAccount.HEALTHKIT_NUTRITION_WRITE,
+  HmsHealthAccount.HEALTHKIT_LOCATION_READ,
+  HmsHealthAccount.HEALTHKIT_LOCATION_WRITE,
 ];
 
 const pages = [
@@ -77,7 +85,7 @@ const pages = [
   {
     title: "HealthRecordController",
     component: HealthRecordController,
-  }, 
+  },
 ];
 
 /**
