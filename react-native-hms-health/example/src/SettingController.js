@@ -25,7 +25,7 @@ import {
 } from "@hmscore/react-native-hms-health";
 import Utils from "./Utils";
 
-const dataTypeName = "com.demo.health.anyExtendedCustomDataType";
+const dataTypeName = "com.mo55.hms.rn.health.anyExtendedCustomDataType";
 
 export default class SettingController extends React.Component {
   constructor(props) {
