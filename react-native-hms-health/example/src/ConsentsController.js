@@ -21,12 +21,16 @@ import { styles } from "./styles";
 import { HmsConsentsController } from "@hmscore/react-native-hms-health";
 import Utils from "./Utils";
 
+// Can be found in the agconnect-services.json file or on AppGallery Connect
+const appId = "106192785";
+
 export default class ConsentsController extends React.Component {
+
   constructor(props) {
     super(props);
     this.state = {
       lang: "en-us",
-      appId: "103345755",
+      appId: appId,
       scopeList: [
         "https://www.huawei.com/healthkit/step.read",
         "https://www.huawei.com/healthkit/step.write",
