@@ -2,6 +2,12 @@
   <h1 align="center">React-Native HMS Health</h1>
 </p>
 
+<h1>
+  DISCLAIMER: This is an <b>UNOFFICIAL</b> fork of the React Native plugin for Health Kit.
+  For the official plugins, please check <a href="https://developer.huawei.com/consumer/en/doc/development/HMS-Plugin-Guides/rn-intro-0000001050975015" alt="developer website">the developer website</a>, <a href="https://github.com/HMS-Core/hms-react-native-plugin" alt="Github page">the offical Github page</a> or <a href="https://www.npmjs.com/~hmscore" alt="npm page">the official npm page</a>.
+</h1>
+<br>
+
 
 <p align="center">
   <a href="https://www.npmjs.com/package/@hmscore/react-native-hms-health"><img src="https://img.shields.io/npm/dm/@hmscore/react-native-hms-health?color=%23007EC6&style=for-the-badge" alt="downloads"></a>
