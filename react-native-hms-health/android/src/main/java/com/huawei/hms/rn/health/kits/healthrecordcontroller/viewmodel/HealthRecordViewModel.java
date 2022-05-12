@@ -81,6 +81,11 @@ public class HealthRecordViewModel implements HealthRecordService {
      */
     @Override
     public void updateHealthRecord(HealthRecordController healthRecordController, HealthRecord healthRecord, VoidResultHelper resultHelper) {
+        if (healthRecordIdFromInsertResult.equals("")) {
+            resultHelper.onFail(new NullPointerException("healthRecordIdFromInsertResult was null"));
+            return;
+        }
+
         HealthRecordUpdateOptions updateOptions = new HealthRecordUpdateOptions.Builder().setHealthRecord(healthRecord)
                 .setHealthRecordId(healthRecordIdFromInsertResult)
                 .build();
