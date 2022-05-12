@@ -1,4 +1,4 @@
-package com.mo55;
+package com.mo55.hms.rn.health;
 
 import com.facebook.react.ReactActivity;
 import com.facebook.react.ReactActivityDelegate;
