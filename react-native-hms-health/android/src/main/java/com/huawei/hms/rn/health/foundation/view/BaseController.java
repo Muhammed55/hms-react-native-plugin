@@ -60,4 +60,14 @@ public class BaseController extends ReactContextBaseJavaModule {
     public Map<String, Object> getConstants() {
         return DATA_CONSTANTS_MAP;
     }
+
+    @ReactMethod
+    public void addListener(String eventName) {
+        // Keep: required since react-native 0.65 to prevent warnings.
+    }
+
+    @ReactMethod
+    public void removeListeners(Integer count) {
+        // Keep: required since react-native 0.65 to prevent warnings.
+    }
 }

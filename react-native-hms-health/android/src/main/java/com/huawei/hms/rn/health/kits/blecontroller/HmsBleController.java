@@ -273,4 +273,13 @@ public class HmsBleController extends BaseController implements BaseProtocol.Eve
         }
     }
 
+    @ReactMethod
+    public void addListener(String eventName) {
+        // Keep: required since react-native 0.65 to prevent warnings.
+    }
+
+    @ReactMethod
+    public void removeListeners(Integer count) {
+        // Keep: required since react-native 0.65 to prevent warnings.
+    }
 }
