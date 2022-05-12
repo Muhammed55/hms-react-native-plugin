@@ -82,7 +82,7 @@ public class HealthRecordViewModel implements HealthRecordService {
     @Override
     public void updateHealthRecord(HealthRecordController healthRecordController, HealthRecord healthRecord, VoidResultHelper resultHelper) {
         if (healthRecordIdFromInsertResult.equals("")) {
-            resultHelper.onFail(new NullPointerException("healthRecordIdFromInsertResult was null"));
+            resultHelper.onFail(new Exception("healthRecordIdFromInsertResult was empty"));
             return;
         }
 
