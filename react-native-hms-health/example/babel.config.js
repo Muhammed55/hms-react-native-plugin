@@ -20,6 +20,8 @@ module.exports = {
   presets: ['module:metro-react-native-babel-preset'],
   plugins: [
     [
+      // This allows us to import @hmscore/react-native-hms-health in the included example
+      // and have it refer to the parent folder, which is the plugin.
       'module-resolver',
       {
         'alias': {
