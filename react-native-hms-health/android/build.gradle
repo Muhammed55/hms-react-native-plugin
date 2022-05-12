@@ -44,7 +44,7 @@ dependencies {
     //noinspection GradleDynamicVersion
     implementation 'com.facebook.react:react-native:+'  // From node_modules
     // HMS HEALTH
-    implementation "com.huawei.hms:health:6.0.0.300"
+    implementation "com.huawei.hms:health:6.4.0.301"
     // AGCONNECT
     implementation "com.huawei.agconnect:agconnect-core:1.6.5.300"
 }
