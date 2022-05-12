@@ -104,13 +104,13 @@ export default class HealthRecordController extends React.Component {
       ];
 
       const dataCollectorArray = [
-        
+
           dataCollector = {
             dataType: HmsHealthRecordController.DT_INSTANTANEOUS_HEART_RATE,
             dataGenerateType: HmsHealthRecordController.DATA_TYPE_RAW,
             dataStreamName: "such as step count",
           },
-    
+
           dataCollector1 = {
             dataType: HmsHealthRecordController.POLYMERIZE_CONTINUOUS_HEART_RATE_STATISTICS,
             dataGenerateType: HmsHealthRecordController.DATA_TYPE_RAW,
@@ -122,14 +122,14 @@ export default class HealthRecordController extends React.Component {
             dataGenerateType: HmsHealthRecordController.DATA_TYPE_RAW,
             dataCollectorName: "such as step count",
           }
-        
+
       ]
 
       const result = await HmsHealthRecordController.addHealthRecord(
         healthRecordBuilder,
         dataCollectorArray,
         sampleSetMapArr
-      );  
+      );
       alert(JSON.stringify(result));
       Utils.logResult("addActivityRecord", result);
       Utils.notify("addActivityRecord - " + JSON.stringify(result));
@@ -202,13 +202,13 @@ export default class HealthRecordController extends React.Component {
       ];
 
       const dataCollectorArray = [
-        
+
           dataCollector = {
             dataType: HmsHealthRecordController.DT_INSTANTANEOUS_HEART_RATE,
             dataGenerateType: HmsHealthRecordController.DATA_TYPE_RAW,
             dataStreamName: "such as step count",
           },
-    
+
           dataCollector1 = {
             dataType: HmsHealthRecordController.POLYMERIZE_CONTINUOUS_HEART_RATE_STATISTICS,
             dataGenerateType: HmsHealthRecordController.DATA_TYPE_RAW,
@@ -220,14 +220,14 @@ export default class HealthRecordController extends React.Component {
             dataGenerateType: HmsHealthRecordController.DATA_TYPE_RAW,
             dataCollectorName: "such as step count",
           }
-        
+
       ]
 
       const result = await HmsHealthRecordController.updateHealthRecord(
         healthRecordBuilder,
         dataCollectorArray,
         sampleSetMapArr
-      );  
+      );
       alert(JSON.stringify(result));
       Utils.logResult("addActivityRecord", result);
       Utils.notify("addActivityRecord - " + JSON.stringify(result));
@@ -275,7 +275,7 @@ export default class HealthRecordController extends React.Component {
               <Text style={styles.smallButtonLabel}> Get Health Record </Text>
               </TouchableOpacity>
         </View>
-        
+
       </View>
     );
   }

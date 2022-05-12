@@ -39,8 +39,8 @@ export default class ActivityRecordsController extends React.Component {
     this.state = {
       activityRecordId: "AR:" + Date.now().toLocaleString(),
       dateMap: {
-        startTime: "2020-12-19 09:00:00",
-        endTime:  "2020-12-19 21:00:00",
+        startTime: "2022-05-06 09:00:00",
+        endTime:  "2022-05-06 21:00:00",
         timeUnit: HmsActivityRecordsController.MILLISECONDS,
       },
       dataType: {
@@ -91,7 +91,7 @@ export default class ActivityRecordsController extends React.Component {
         description:
           "This is ActivityRecord begin test!: " + this.state.activityRecordId,
         activityType: HmsActivityRecordsController.RUNNING,
-        startTime: "2020-12-20 12:39:00",
+        startTime: "2022-04-29 12:39:00",
         timeUnit: HmsActivityRecordsController.MILLISECONDS,
         timeZone: "+0100",
       };
@@ -168,10 +168,10 @@ export default class ActivityRecordsController extends React.Component {
     try {
       Utils.logCall("addActivityRecord - ActivityRecordsController");
       // Create start time that will be used to add activity record.
-      const startTime = "2020-12-19 18:00:00";
+      const startTime = "2022-05-06 18:00:00";
 
       // Create end time that will be used to add activity record.
-      const endTime = "2020-12-19 19:00:00";
+      const endTime = "2022-05-06 19:00:00";
 
       const dataCollector = {
         dataType: HmsActivityRecordsController.DT_CONTINUOUS_STEPS_DELTA,
@@ -211,15 +211,15 @@ export default class ActivityRecordsController extends React.Component {
         endTime: endTime,
         timeUnit: HmsActivityRecordsController.MILLISECONDS,
         activitySummary: activitySummmary,
-        timeZone: "+0800",
+        timeZone: "+0100",
       };
 
       //You can use sampleSets to add more sampling points to the sampling dataset.
       //Build the (DT_CONTINUOUS_STEPS_DELTA) sampling data object and add it to the sampling dataSet
       const sampleSetMapArr = [
         {
-          startTime: "2020-12-19 18:45:00",
-          endTime: "2020-12-19 18:58:00",
+          startTime: "2022-05-06 18:45:00",
+          endTime: "2022-05-06 18:58:00",
           timeUnit: HmsActivityRecordsController.MILLISECONDS,
           fields: [
             {

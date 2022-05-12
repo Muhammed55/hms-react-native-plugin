@@ -43,10 +43,10 @@ export default class DataController extends React.Component {
     super(props);
     this.state = {
       dataType: HmsDataController.DT_CONTINUOUS_STEPS_DELTA,
-      samplingTime: "2020-12-19 08:00:00",
+      samplingTime: "2022-05-10 08:00:00",
       streamName: "HEALTH_DEMO",
-      startTime: "2020-12-19 05:00:00",
-      endTime: "2020-12-19 21:00:00",
+      startTime: "2022-05-10 05:00:00",
+      endTime: "2022-05-10 21:00:00",
     };
   }
 
@@ -311,6 +311,8 @@ export default class DataController extends React.Component {
         timeUnit: HmsDataController.MILLISECONDS,
       };
 
+      await this.create();
+
       // Call the data controller to query the sampling dataset.
       const result = await HmsDataController.read(
         dataCollector,
@@ -405,8 +407,8 @@ export default class DataController extends React.Component {
       //You can use sampleSets to add more sampling points to the sampling dataset.
       const sampleSets = [
         {
-          startTime: "2020-07-14 13:12:00",
-          endTime: "2020-07-14 13:12:00",
+          startTime: "2022-05-16 13:12:00",
+          endTime: "2022-05-16 13:12:00",
           fieldValue: HmsDataController.FIELD_HEIGHT,
           floatValue: 1.56,
           timeUnit: HmsDataController.MILLISECONDS,
