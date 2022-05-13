@@ -28,8 +28,8 @@ export default class HealthRecordController extends React.Component {
     super(props);
     this.state = {
       dateMap: {
-        startTime: "2021-08-17 23:00:00",
-        endTime:  "2021-08-17 23:25:00",
+        startTime: "2022-05-01 23:00:00",
+        endTime:  "2022-05-01 23:25:00",
         timeUnit: HmsHealthRecordController.MILLISECONDS,
       },
       dataType: {
@@ -44,8 +44,8 @@ export default class HealthRecordController extends React.Component {
     try {
       Utils.logCall("addHealthRecord - HealthRecordController");
 
-      const startTime = "2021-08-17 23:00:00";
-      const endTime = "2021-08-17 23:25:00";
+      const startTime = "2022-05-01 23:00:00";
+      const endTime = "2022-05-01 23:25:00";
 
       const samplePoint = [
         {
@@ -142,8 +142,8 @@ export default class HealthRecordController extends React.Component {
     try {
       Utils.logCall("addHealthRecord - HealthRecordController");
 
-      const startTime = "2021-08-17 23:00:00";
-      const endTime = "2021-08-17 23:25:00";
+      const startTime = "2022-05-01 23:00:00";
+      const endTime = "2022-05-01 23:25:00";
 
       const samplePoint = [
         {
