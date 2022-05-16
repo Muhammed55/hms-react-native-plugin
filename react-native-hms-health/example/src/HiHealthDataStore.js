@@ -42,7 +42,7 @@ import Utils from "./Utils";
              time_info: event.value.time_info
            });
          }
-         else if(event.resultCode == HiHealthDataStore.DEVICE_EXCEPTION) {
+         else if(event.resultCode == HmsHiHealthDataStore.DEVICE_EXCEPTION) {
            Utils.notify("Have you put on your watch?\nUnable to read heart rate.");
          }
          // For possible exceptions, see https://developer.huawei.com/consumer/en/doc/development/HMSCore-Guides/extended-errocode-0000001053256958
@@ -64,7 +64,7 @@ import Utils from "./Utils";
         .then(result => console.log("startReadingHearRate result successful: " + result))
         .catch((error) => {
           console.log(error.message)
-          if (error.code == HiHealthDataStore.ERR_DEVICE_NOT_CONNECTED) {
+          if (error.code == HmsHiHealthDataStore.ERR_DEVICE_NOT_CONNECTED) {
             Utils.notify("No device has been connected.\nGo to the Huawei Health app and connect a device.")
           }
         });
