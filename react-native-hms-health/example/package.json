@@ -1,6 +1,6 @@
 {
   "name": "@hmscore/react-native-hms-health-demo",
-  "version": "6.0.0-300",
+  "version": "6.4.0-301",
   "private": true,
   "scripts": {
     "android": "react-native run-android",
