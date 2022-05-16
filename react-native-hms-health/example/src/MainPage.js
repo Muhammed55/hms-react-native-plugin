@@ -33,6 +33,7 @@ import ActivityRecordsController from "./ActivityRecordsController";
 import SettingController from "./SettingController";
 import ConsentsController from "./ConsentsController";
 import HealthRecordController from "./HealthRecordController";
+import HiHealthDataStore from "./HiHealthDataStore";
 
 // Add scopes to apply for. The following only shows an example.
 // Developers need to add scopes according to their specific needs.
@@ -59,9 +60,15 @@ const scopes = [
   HmsHealthAccount.HEALTHKIT_NUTRITION_WRITE,
   HmsHealthAccount.HEALTHKIT_LOCATION_READ,
   HmsHealthAccount.HEALTHKIT_LOCATION_WRITE,
+  // Real-time heart rate
+  HmsHealthAccount.HEALTHKIT_EXTEND_REALTIME_HEART_READ,
 ];
 
 const pages = [
+  {
+    title: "HiHealthDataStore",
+    component: HiHealthDataStore,
+  },
   {
     title: "DataController",
     component: DataController,

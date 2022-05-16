@@ -16,6 +16,7 @@
 
 package com.huawei.hms.rn.health.foundation.constant;
 
+import com.huawei.hihealth.error.HiHealthError;
 import com.huawei.hms.hihealth.data.DataCollector;
 import com.huawei.hms.hihealth.data.DataType;
 
@@ -27,6 +28,7 @@ import com.huawei.hms.hihealth.data.SleepFragmentCategory;
 import com.huawei.hms.hihealth.data.SleepState;
 import com.huawei.hms.hihealth.data.SportDataTypes;
 import com.huawei.hms.hihealth.data.SportFields;
+import com.huawei.hms.rn.health.kits.activityrecords.util.ActivityRecordsConstants;
 
 import java.text.SimpleDateFormat;
 import java.util.Collections;
@@ -837,6 +839,77 @@ public interface Constants {
     static Map<String, Object> initDataCollectorConstants() {
         Map<String, Object> constantMap = new HashMap<>();
         for (DataCollectorConstants variable : EnumSet.allOf(DataCollectorConstants.class)) {
+            String key = variable.getName();
+            int value = variable.getValue();
+            constantMap.put(key, value);
+        }
+        return Collections.unmodifiableMap(constantMap);
+    }
+
+    /**
+     * HiHealth Kit Error constants
+     */
+
+    enum HiHealthErrorConstants {
+        SUCCESS("SUCCESS", HiHealthError.SUCCESS),
+        FAILED("FAILED", HiHealthError.FAILED),
+        ERR_API_EXCEPTION("ERR_API_EXCEPTION", HiHealthError.ERR_API_EXCEPTION),
+        ERR_BETA_SCOPE_EXCEPTION("ERR_BETA_SCOPE_EXCEPTION", HiHealthError.ERR_BETA_SCOPE_EXCEPTION),
+        ERR_DATA_VALIDATOR("ERR_DATA_VALIDATOR", HiHealthError.ERR_DATA_VALIDATOR),
+        ERR_DEVICE_EXCEPTION("ERR_DEVICE_EXCEPTION", HiHealthError.ERR_DEVICE_EXCEPTION),
+        ERR_DEVICE_NOT_CONNECTED("ERR_DEVICE_NOT_CONNECTED", HiHealthError.ERR_DEVICE_NOT_CONNECTED),
+        ERR_HEALTH_SERVICE_DISCONNECTED("ERR_HEALTH_SERVICE_DISCONNECTED", HiHealthError.ERR_HEALTH_SERVICE_DISCONNECTED),
+        ERR_HEALTH_VERSION_IS_NOT_SUPPORTED("ERR_HEALTH_VERSION_IS_NOT_SUPPORTED", HiHealthError.ERR_HEALTH_VERSION_IS_NOT_SUPPORTED),
+        ERR_HMS_UNAVAILABLE_VERSION("ERR_HMS_UNAVAILABLE_VERSION", HiHealthError.ERR_HMS_UNAVAILABLE_VERSION),
+        ERR_LIMIT_EXCEPTION("ERR_LIMIT_EXCEPTION", HiHealthError.ERR_LIMIT_EXCEPTION),
+        ERR_NETWORK("ERR_NETWORK", HiHealthError.ERR_NETWORK),
+        ERR_PARAMETER_ERROR("ERR_PARAMETER_ERROR", HiHealthError.ERR_PARAMETER_ERROR),
+        ERR_PERMISSION_EXCEPTION("ERR_PERMISSION_EXCEPTION", HiHealthError.ERR_PERMISSION_EXCEPTION),
+        ERR_PRIVACY_USER_DENIED("ERR_PRIVACY_USER_DENIED", HiHealthError.ERR_PRIVACY_USER_DENIED),
+        ERR_REPEAT_EXCEPTION("ERR_REPEAT_EXCEPTION", HiHealthError.ERR_REPEAT_EXCEPTION),
+        ERR_SCOPE_EXCEPTION("ERR_SCOPE_EXCEPTION", HiHealthError.ERR_SCOPE_EXCEPTION),
+        PARAM_INVALID("PARAM_INVALID", HiHealthError.PARAM_INVALID);
+
+        private final String name;
+        private final int value;
+
+        HiHealthErrorConstants(String name, int value) {
+            this.name = name;
+            this.value = value;
+        }
+
+        public String getName() {
+            return name;
+        }
+
+        public int getValue() {
+            return value;
+        }
+
+        public static HiHealthErrorConstants fromString(String text) {
+            for (HiHealthErrorConstants variable : HiHealthErrorConstants.values()) {
+                if (variable.name.equalsIgnoreCase(text)) {
+                    return variable;
+                }
+            }
+            return null;
+        }
+
+    }
+
+    /**
+     * whole HiHealth Error constant variables as Map
+     **/
+    Map<String, Object> HIHEALTH_ERROR_CONSTANTS = initHiHealthErrorConstants();
+
+    /**
+     * Initializes HiHealth Error Constants map.
+     *
+     * @return Map<String, Object> HiHealth Error Constants map
+     */
+    static Map<String, Object> initHiHealthErrorConstants() {
+        Map<String, Object> constantMap = new HashMap<>();
+        for (HiHealthErrorConstants variable : EnumSet.allOf(HiHealthErrorConstants.class)) {
             String key = variable.getName();
             int value = variable.getValue();
             constantMap.put(key, value);

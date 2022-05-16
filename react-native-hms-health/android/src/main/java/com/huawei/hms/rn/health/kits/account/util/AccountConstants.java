@@ -112,7 +112,8 @@ public interface AccountConstants {
         HEALTHKIT_ACTIVITY_RECORD_BOTH("https://www.huawei.com/healthkit/activityrecord.both"),
         HEALTHKIT_STRESS_READ("https://www.huawei.com/healthkit/stress.read"),
         HEALTHKIT_STRESS_WRITE("https://www.huawei.com/healthkit/stress.write"),
-        HEALTHKIT_STRESS_BOTH("https://www.huawei.com/healthkit/stress.both");
+        HEALTHKIT_STRESS_BOTH("https://www.huawei.com/healthkit/stress.both"),
+        HEALTHKIT_EXTEND_REALTIME_HEART_READ("https://www.huawei.com/healthkit/extend/realtimeheart.read");
 
         private final String value;
 

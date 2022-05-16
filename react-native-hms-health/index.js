@@ -24,7 +24,8 @@ export const {
   HmsSettingController,
   HmsConsentsController,
   HmsBleController,
-  HmsHealthRecordController
+  HmsHealthRecordController,
+  HmsHiHealthDataStore
 } = NativeModules;
 
 export default {
@@ -35,5 +36,6 @@ export default {
   HmsSettingController,
   HmsConsentsController,
   HmsBleController,
-  HmsHealthRecordController
+  HmsHealthRecordController,
+  HmsHiHealthDataStore
 };
