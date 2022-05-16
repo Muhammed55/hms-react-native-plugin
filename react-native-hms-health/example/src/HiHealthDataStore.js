@@ -33,7 +33,7 @@ import Utils from "./Utils";
        "HeartRateOnChange",
        (event) => {
          console.log(event);
-         if(event.resultCode == 0) {
+         if(event.resultCode == HmsHiHealthDataStore.SUCCESS) {
            this.setState({
              heartRateCredibility: event.value.heartRateCredibility,
              heartRate : event.value.hr_info, // Deprecated value. Returns 0.
