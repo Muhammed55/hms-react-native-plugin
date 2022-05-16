@@ -7,7 +7,6 @@
   "repository": {
     "type": "git",
     "url": "https://github.com/Muhammed55/hms-react-native-plugin/tree/master/react-native-hms-health",
-    "directory": "react-native-hms-health"
   },
   "homepage": "https://developer.huawei.com/consumer/en/doc/overview/HMS-Core-Plugin",
   "license": "Apache-2.0",
