@@ -36,9 +36,9 @@ import Utils from "./Utils";
          if(event.resultCode == HmsHiHealthDataStore.SUCCESS) {
            this.setState({
              heartRateCredibility: event.value.heartRateCredibility,
-             heartRate : event.value.hr_info, // Deprecated value. Returns 0.
+             heartRate : event.value.hr_info,
              hri_info: event.value.hri_info, // Deprecated value. Returns 0.
-             hrsqi_info: event.value.hrsqi_info,
+             hrsqi_info: event.value.hrsqi_info, // Deprecated value. Returns 0.
              time_info: event.value.time_info
            });
          }

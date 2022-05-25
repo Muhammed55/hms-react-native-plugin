@@ -29,6 +29,7 @@ import static com.huawei.hms.rn.health.foundation.constant.Constants.FIELD_TYPES
 import static com.huawei.hms.rn.health.foundation.constant.Constants.FIELD_VALUE_ENUMS_MAP;
 import static com.huawei.hms.rn.health.foundation.constant.Constants.SLEEP_STATE_CONSTANTS;
 import static com.huawei.hms.rn.health.foundation.constant.Constants.TIME_UNITS_MAP;
+import static com.huawei.hms.rn.health.foundation.constant.Constants.HIHEALTH_ERROR_CONSTANTS;
 
 /**
  * {@link HmsDataController} Constant Values.
@@ -67,6 +68,7 @@ public interface DataControllerConstants {
         constantMap.putAll(FIELD_VALUE_ENUMS_MAP);
         constantMap.putAll(SLEEP_STATE_CONSTANTS);
         constantMap.putAll(DATA_COLLECTOR_CONSTANTS);
+        constantMap.putAll(HIHEALTH_ERROR_CONSTANTS);
 
         constantMap.put("AUTO_RECORDER_POINT_LISTENER", "onSamplePointListener");
         constantMap.put("ACCESS_READ", HiHealthOptions.ACCESS_READ);
